@@ -11,3 +11,7 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+
+ function favoriteDessert(){
+ 	return { name: "orieb", countryOfOrigin: "jordan ", flavor: "green cherry " }
+ }
