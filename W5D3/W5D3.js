@@ -4,7 +4,7 @@ and you were given a data set with people's meal preferences and dietary restric
 Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
 and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
 Otherwise, your function should return false.
-
+/*/
 var staffA = [
   {
     name: "Lia",
@@ -31,10 +31,10 @@ var staffA = [
     mealPreferences: "non-vegetarian"
   }
 ];
-Calling your function should result in:
+//Calling your function should result in:
 
-orderAVegetarianDish(staffA); //true
-*/
+//orderAVegetarianDish(staffA); //true
+
 function each(array,func){
   for(var i=0; i<array.length;i++){
     func(array[i])
@@ -49,8 +49,13 @@ function reduce(array, f, start) {
   return acc 
 }
 
-function  orderAVegetarianDish(array){
-  return reduce(array,function(start,element){
-    return  start ||(element.mealPreferences==="vegetarian")
- }, false);}
+function  orderAVegetarianDish(array) {
+  return reduce(array,function(start,element) {
+    return  start ||( element.mealPreferences === "vegetarian" )
+ }, false
+
+
+ );}
+
+
  
