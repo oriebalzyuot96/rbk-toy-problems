@@ -35,5 +35,22 @@ Calling your function should result in:
 
 orderAVegetarianDish(staffA); //true
 */
+function each(array,func){
+  for(var i=0; i<array.length;i++){
+    func(array[i])
+  }
+}
+function reduce(array, f, start) {
 
-// your answer is here 
+  var acc = start;
+  each(array,function(element){
+    acc = f(acc,element)
+  });
+  return acc 
+}
+
+function  orderAVegetarianDish(array){
+  return reduce(array,function(start,element){
+    return  start ||(element.mealPreferences==="vegetarian")
+ }, false);}
+ 
