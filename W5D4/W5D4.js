@@ -53,9 +53,16 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 
 
+/*///
+//i know my solution is wrong ..i try to acess max element ..sorry
+function shoppingSummary(array){
+  each(array,function(element){
+    if (element.price<=100){
+      return "i got "+element.weightInPounds +"items at"+element.price
+    }
+  })
+}
 /*
-
-
 Exercise 2
 Suppose that you wanted to take out the most expensive item on your shopping list. 
 Write a function called removeMostExpensive 
@@ -94,7 +101,22 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
- */
+ *//
 
-//your answer is here
-
+///your answer is here
+function each(coll, f) {
+  if (Array.isArray(coll)) {
+    for (var i = 0; i < coll.length; i++) {
+      f(coll[i], i);
+    }
+  } else {
+    for (var key in coll) {
+      f(coll[key], key);
+    }
+  }
+}
+ function removeMostExpensive(shoppingList){
+ each(array,function(element){
+  var max =element.
+ 
+ }
