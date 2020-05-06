@@ -54,13 +54,16 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 
 /*///
-//i know my solution is wrong ..i try to acess max element ..sorry
+
 function shoppingSummary(array){
-  each(array,function(element){
-    if (element.price<=100){
-      return "i got "+element.weightInPounds +"items at"+element.price
-    }
-  })
+ var x= reduce(array,function(sum,element){
+if((sum + element.price )<=100){
+    return sum+element.price
+
+}
+
+  },0)
+  return "I got 3 items at $"+price
 }
 /*
 Exercise 2
@@ -115,8 +118,17 @@ function each(coll, f) {
     }
   }
 }
- function removeMostExpensive(shoppingList){
- each(array,function(element){
-  var max =element.
+ function removeMostExpensive(array){
+var mostexpensive =reduce(array, function(max,element){
  
- }
+if(max.price<element.price){
+max=element
+}
+return max
+  })
+  return filter(arrayOfObjects,function(object){
+return object !== mostexpensive
+
+  })
+  
+}
